@@ -1,6 +1,6 @@
 <template>
-  <!--<a
-    :href="$themeConfig.pages[fileName].href"
+  <a
+    :href="pages[fileName].href"
     class="px-3 py-2 transition-colors duration-200 relative block rounded-md"
     :class="[
       isActive
@@ -8,9 +8,9 @@
         : 'hover:text-gray-900 text-gray-500',
     ]"
   >
-    <span>{{ $themeConfig.pages[fileName].title }}</span>
-  </a>-->
-  <a
+    <span>{{ pages[fileName].title }}</span>
+  </a>
+  <!--<a
       href="http://github.com"
       class="px-3 py-2 transition-colors duration-200 relative block rounded-md"
       :class="[
@@ -20,11 +20,13 @@
     ]"
   >
     <span>{{ fileName }}</span>
-  </a>
+  </a>-->
 </template>
 
 <script>
 import { getNameFromPath } from '../utils.js'
+import { ref, watch, computed } from 'vue';
+import { useData } from 'vitepress'
 
 export default {
   props: {
@@ -32,6 +34,16 @@ export default {
       type: String,
       required: true,
     },
+  },
+  setup() {
+    const { site, page, theme, frontmatter } = useData();
+    //const currentRoute = ref();
+    return {
+      theme,
+      page,
+      collections: computed(() => theme.value.collections),
+      pages: computed(() => theme.value.pages),
+    };
   },
   computed: {
     isActive() {

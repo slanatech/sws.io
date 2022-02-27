@@ -38,6 +38,8 @@ import TableOfContent from './TableOfContent.vue'
 import ContentWrapper from './ContentWrapper.vue'
 import IconNavOpen from './icons/IconNavOpen.vue'
 import IconNavClose from './icons/IconNavClose.vue'
+import { ref, watch, computed } from 'vue';
+import { useData } from 'vitepress'
 
 export default {
   data() {
@@ -54,6 +56,16 @@ export default {
     IconNavOpen,
     IconNavClose,
   },
+  setup() {
+    const { site, page, theme, frontmatter } = useData();
+    //const currentRoute = ref();
+    return {
+      theme,
+      page,
+      collections: computed(() => theme.value.collections),
+      pages: computed(() => theme.value.pages),
+    };
+  },
   mounted() {
     this.getAnchors()
   },
@@ -69,7 +81,7 @@ export default {
         })
         .filter((item) => {
           // Only need the ones exist in TOC
-          return this.$page.headers.some(
+          return this.page.headers.some(
             (header) => '#' + header.slug === item.hash
           )
         })

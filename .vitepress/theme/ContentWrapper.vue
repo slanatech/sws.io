@@ -4,9 +4,9 @@
       <h1
         class="inline-block text-3xl font-extrabold text-gray-900 tracking-tight"
       >
-        {{ "$page.title" }}
+        {{ page.title }}
       </h1>
-      <p class="mt-1 text-lg text-gray-500">{{ "$page.description" }}</p>
+      <p class="mt-1 text-lg text-gray-500">{{ page.description }}</p>
     </div>
 
     <Content class="prose" />
@@ -44,6 +44,8 @@
 <script>
 import OutLink from './components/OutLink.vue'
 import { getNameFromPath } from './utils.js'
+import { ref, watch, computed } from 'vue';
+import { useData } from 'vitepress'
 
 export default {
   data() {
@@ -55,22 +57,30 @@ export default {
   },
   components: { OutLink },
   emits: ['contentUpdated'],
+  setup() {
+    const { site, page, theme, frontmatter } = useData();
+    //const currentRoute = ref();
+    return {
+      theme,
+      page,
+      collections: computed(() => theme.value.collections),
+      pages: computed(() => theme.value.pages)
+    };
+  },
   updated() {
     this.$emit('contentUpdated')
     this.getPrevNextPage()
   },
   mounted() {
-    /** TODO
-    this.flatPages = Object.values(this.$themeConfig.collections)
+    this.flatPages = Object.values(this.collections)
       .map((item) => Object.values(item))
       .flat()
-    */
     this.getPrevNextPage()
   },
   methods: {
     getPrevNextPage() {
       const pageIndex = this.flatPages.indexOf(
-        getNameFromPath(this.$page.relativePath)
+        getNameFromPath(this.page.relativePath)
       )
 
       const prevPageID = pageIndex > 0 ? this.flatPages[pageIndex - 1] : null
@@ -79,8 +89,8 @@ export default {
           ? this.flatPages[pageIndex + 1]
           : null
 
-      this.prevPage = this.$themeConfig.pages[prevPageID]
-      this.nextPage = this.$themeConfig.pages[nextPageID]
+      this.prevPage = this.pages[prevPageID]
+      this.nextPage = this.pages[nextPageID]
     },
   },
   computed: {
