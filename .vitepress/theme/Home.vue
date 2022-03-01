@@ -19,7 +19,7 @@
             </a>
 
             <OutLink
-              :href="$themeConfig.repo"
+              :href="themeConfig.repo"
               class="text-gray-400 hover:text-gray-500 transition-colors duration-200"
             >
               <span class="sr-only">Repository on GitHub</span>
@@ -82,8 +82,18 @@ import IconGitHub from './icons/IconGitHub.vue'
 import IconCopy from './icons/IconCopy.vue'
 import OutLink from './components/OutLink.vue'
 
+import { useRoute, useData } from 'vitepress'
+import { ref, watch, computed } from 'vue';
+
 export default {
   components: { SearchBox, Logo, IconGitHub, IconCopy, OutLink },
+  setup() {
+    const { site, page, theme } = useData();
+    const route = useRoute();
+    return {
+      themeConfig: computed(() => theme.value),
+    };
+  },
   methods: {
     writeClipboard() {
       navigator.clipboard.writeText('npm install tailwindcss')
