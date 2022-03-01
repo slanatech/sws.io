@@ -1,12 +1,14 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const svgToDataUri = require('mini-svg-data-uri')
-const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette')
+const {
+  default: flattenColorPalette,
+} = require('tailwindcss/lib/util/flattenColorPalette')
 
 module.exports = {
   experimental: {
     optimizeUniversalDefaults: true,
   },
-  content: ['./src/**/*.{js,jsx,mdx,html}', './remark/**/*.js'],
+  content: ['./.vitepress/**/*.{js,jsx,mdx,vue,html}', './remark/**/*.js'],
   darkMode: 'class',
   theme: {
     // `demo-*` screens are used for the "mobile-first" responsive demo
@@ -259,7 +261,10 @@ module.exports = {
         'supports-backdrop-blur',
         '@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))'
       )
-      addVariant('supports-scrollbars', '@supports selector(::-webkit-scrollbar)')
+      addVariant(
+        'supports-scrollbars',
+        '@supports selector(::-webkit-scrollbar)'
+      )
       addVariant('children', '& > *')
       addVariant('scrollbar', '&::-webkit-scrollbar')
       addVariant('scrollbar-track', '&::-webkit-scrollbar-track')
