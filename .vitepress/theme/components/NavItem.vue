@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     isActive() {
-      return false; //getNameFromPath(this.$page.relativePath) == this.fileName
+      return getNameFromPath(this.page.relativePath) == this.fileName
     },
   },
 }
