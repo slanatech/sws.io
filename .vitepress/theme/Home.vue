@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden text-gray-500"
-  >
+  <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden text-gray-500">
     <header class="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto">
       <div class="px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
         <!--<div
@@ -28,13 +26,8 @@
           </div>
         </div>-->
 
-        <div
-          class="relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200"
-        >
-          <svg
-            viewBox="0 0 248 31"
-            class="text-slate-900 dark:text-white w-auto h-5"
-          >
+        <div class="relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
+          <svg viewBox="0 0 248 31" class="text-slate-900 dark:text-white w-auto h-5">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -49,30 +42,15 @@
             ></path>
           </svg>
           <div class="flex items-center">
-            <button
-              type="button"
-              class="text-slate-500 hover:text-slate-600 w-8 h-8 -my-1 flex items-center justify-center md:hidden dark:hover:text-slate-300"
-            >
+            <button type="button" class="text-slate-500 hover:text-slate-600 w-8 h-8 -my-1 flex items-center justify-center md:hidden dark:hover:text-slate-300">
               <span class="sr-only">Search</span
-              ><svg
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
+              ><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="m19 19-3.5-3.5"></path>
                 <circle cx="11" cy="11" r="6"></circle>
               </svg>
             </button>
             <div class="-my-1 ml-2 -mr-1 md:hidden">
-              <button
-                type="button"
-                class="text-slate-500 w-8 h-8 flex items-center justify-center hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-              >
+              <button type="button" class="text-slate-500 w-8 h-8 flex items-center justify-center hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300">
                 <span class="sr-only">Navigation</span
                 ><svg width="24" height="24" fill="none" aria-hidden="true">
                   <path
@@ -89,33 +67,18 @@
               <nav>
                 <ul class="flex items-center space-x-8">
                   <li>
-                    <a
-                      class="hover:text-sky-500 dark:hover:text-sky-400"
-                      href="/docs/installation"
-                      >Docs</a
-                    >
+                    <a class="hover:text-sky-500 dark:hover:text-sky-400" href="/docs/installation">Docs</a>
                   </li>
                   <li>
-                    <a
-                      href="https://tailwindui.com"
-                      class="hover:text-sky-500 dark:hover:text-sky-400"
-                      >Components</a
-                    >
+                    <a href="https://tailwindui.com" class="hover:text-sky-500 dark:hover:text-sky-400">Components</a>
                   </li>
                   <li>
-                    <a
-                      class="hover:text-sky-500 dark:hover:text-sky-400"
-                      href="/blog"
-                      >Blog</a
-                    >
+                    <a class="hover:text-sky-500 dark:hover:text-sky-400" href="/blog/">Blog</a>
                   </li>
                 </ul>
               </nav>
-              <div
-                class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800"
-              >
-                <label class="sr-only" id="headlessui-listbox-label-2"
-                  >Theme</label
+              <div class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
+                <label class="sr-only" id="headlessui-listbox-label-2">Theme</label
                 ><button
                   type="button"
                   id="headlessui-listbox-button-3"
@@ -124,18 +87,8 @@
                   aria-labelledby="headlessui-listbox-label-2 headlessui-listbox-button-undefined"
                 >
                   <span class="dark:hidden"
-                    ><svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="w-6 h-6"
-                    >
-                      <path
-                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                        class="stroke-slate-400 dark:stroke-slate-500"
-                      ></path>
+                    ><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                      <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="stroke-slate-400 dark:stroke-slate-500"></path>
                       <path
                         d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836"
                         class="stroke-slate-400 dark:stroke-slate-500"
@@ -159,16 +112,9 @@
                         class="fill-slate-400 dark:fill-slate-500"
                       ></path></svg
                   ></span></button
-                ><a
-                  href="https://github.com/tailwindlabs/tailwindcss"
-                  class="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
+                ><a href="https://github.com/tailwindlabs/tailwindcss" class="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
                   ><span class="sr-only">Tailwind CSS on GitHub</span
-                  ><svg
-                    viewBox="0 0 16 16"
-                    class="w-5 h-5"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
+                  ><svg viewBox="0 0 16 16" class="w-5 h-5" fill="currentColor" aria-hidden="true">
                     <path
                       d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
                     ></path></svg
@@ -180,26 +126,18 @@
 
         <Logo class="w-auto h-7 sm:h-8" />
 
-        <h1
-          class="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10"
-        >
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10">
           Rapidly build modern websites without ever leaving your HTML.
         </h1>
 
-        <p
-          class="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11"
-        >
+        <p class="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11">
           A utility-first CSS framework packed with classes like
-          <code class="font-mono text-gray-900 font-bold">flex</code>,
-          <code class="font-mono text-gray-900 font-bold">pt-4</code>,
-          <code class="font-mono text-gray-900 font-bold">text-center</code> and
-          <code class="font-mono text-gray-900 font-bold">rotate-90</code> that
-          can be composed to build any design, directly in your markup.
+          <code class="font-mono text-gray-900 font-bold">flex</code>, <code class="font-mono text-gray-900 font-bold">pt-4</code>,
+          <code class="font-mono text-gray-900 font-bold">text-center</code> and <code class="font-mono text-gray-900 font-bold">rotate-90</code> that can be composed to build any
+          design, directly in your markup.
         </p>
 
-        <div
-          class="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 text-center"
-        >
+        <div class="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 text-center">
           <a
             class="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200"
             href="/docs/"
@@ -212,9 +150,7 @@
             @click="writeClipboard"
           >
             <span class="text-gray-900">
-              <span class="hidden sm:inline text-gray-500" aria-hidden="true">
-                $
-              </span>
+              <span class="hidden sm:inline text-gray-500" aria-hidden="true"> $ </span>
               npm install tailwindcss
             </span>
             <IconCopy />
