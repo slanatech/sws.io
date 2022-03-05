@@ -6,9 +6,9 @@ const { createMarkdownRenderer } = require('vitepress')
 const md = createMarkdownRenderer(process.cwd())
 
 module.exports = {
-  watch: '../posts/*.md',
+  watch: '../blog/*.md',
   load(asFeed = false) {
-    const postDir = path.resolve(__dirname, '../posts')
+    const postDir = path.resolve(__dirname, '../blog')
     return fs
       .readdirSync(postDir)
       .map((file) => getPost(file, postDir, asFeed))
@@ -32,7 +32,7 @@ function getPost(file, postDir, asFeed = false) {
 
   const post = {
     title: data.title,
-    href: `/posts/${file.replace(/\.md$/, '.html')}`,
+    href: `/blog/${file.replace(/\.md$/, '.html')}`,
     date: formatDate(data.date),
     excerpt: md.render(excerpt)
   }
