@@ -33,6 +33,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@headlessui/vue", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:1.5.0"],\
+            ["@heroicons/vue", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:1.0.6"],\
             ["@tailwindcss/aspect-ratio", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:0.4.0"],\
             ["@tailwindcss/forms", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:0.4.0"],\
             ["@tailwindcss/line-clamp", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:0.3.1"],\
@@ -372,6 +374,50 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@gar-promisify-npm-1.1.3-ac1a325862-4059f790e2.zip/node_modules/@gar/promisify/",\
           "packageDependencies": [\
             ["@gar/promisify", "npm:1.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@headlessui/vue", [\
+        ["npm:1.5.0", {\
+          "packageLocation": "./.yarn/cache/@headlessui-vue-npm-1.5.0-949e070cf8-0aab748432.zip/node_modules/@headlessui/vue/",\
+          "packageDependencies": [\
+            ["@headlessui/vue", "npm:1.5.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:1.5.0", {\
+          "packageLocation": "./.yarn/__virtual__/@headlessui-vue-virtual-ce04cadb19/0/cache/@headlessui-vue-npm-1.5.0-949e070cf8-0aab748432.zip/node_modules/@headlessui/vue/",\
+          "packageDependencies": [\
+            ["@headlessui/vue", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:1.5.0"],\
+            ["@types/vue", null],\
+            ["vue", "npm:3.2.31"]\
+          ],\
+          "packagePeers": [\
+            "@types/vue",\
+            "vue"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@heroicons/vue", [\
+        ["npm:1.0.6", {\
+          "packageLocation": "./.yarn/cache/@heroicons-vue-npm-1.0.6-bbd57ff139-63cf6ad94e.zip/node_modules/@heroicons/vue/",\
+          "packageDependencies": [\
+            ["@heroicons/vue", "npm:1.0.6"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:1.0.6", {\
+          "packageLocation": "./.yarn/__virtual__/@heroicons-vue-virtual-ffab4571ba/0/cache/@heroicons-vue-npm-1.0.6-bbd57ff139-63cf6ad94e.zip/node_modules/@heroicons/vue/",\
+          "packageDependencies": [\
+            ["@heroicons/vue", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:1.0.6"],\
+            ["@types/vue", null],\
+            ["vue", "npm:3.2.31"]\
+          ],\
+          "packagePeers": [\
+            "@types/vue",\
+            "vue"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3401,6 +3447,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["sws.io", "workspace:."],\
+            ["@headlessui/vue", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:1.5.0"],\
+            ["@heroicons/vue", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:1.0.6"],\
             ["@tailwindcss/aspect-ratio", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:0.4.0"],\
             ["@tailwindcss/forms", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:0.4.0"],\
             ["@tailwindcss/line-clamp", "virtual:651f4e6bb222818f76dd2c3c2cbc9784523a61442ffcd5fb14879b59fcd23208ff3c0b722da5af61b3916286d397c138f62b974570e622be5fdb6d6143cb72b8#npm:0.3.1"],\

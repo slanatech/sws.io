@@ -1,5 +1,7 @@
 <template>
-  <component v-bind:is="getComponent()"></component>
+  <div class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
+    <component v-bind:is="getComponent()"></component>
+  </div>
 </template>
 
 <script>
@@ -19,9 +21,7 @@ export default {
     const route = useRoute()
     return {
       isIndex: computed(() => {
-        console.log(
-          `Layout: route.path=${route.path}, rel: ${route.data.relativePath}`
-        )
+        console.log(`Layout: route.path=${route.path}, rel: ${route.data.relativePath}`)
         return route.data.relativePath === 'index.md'
       }),
       getComponent: () => {

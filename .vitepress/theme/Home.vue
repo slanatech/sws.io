@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden text-gray-500">
+  <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden bg-slate-50 dark:bg-[#0B1120]">
     <header class="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto">
       <div class="px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
         <!--<div
@@ -78,6 +78,16 @@
                 </ul>
               </nav>
               <div class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
+                <DarkModeSwitch></DarkModeSwitch>
+                <a href="https://github.com/tailwindlabs/tailwindcss" class="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
+                  ><span class="sr-only">Tailwind CSS on GitHub</span
+                  ><svg viewBox="0 0 16 16" class="w-5 h-5" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    ></path></svg
+                ></a>
+              </div>
+              <!--<div class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
                 <label class="sr-only" id="headlessui-listbox-label-2">Theme</label
                 ><button
                   type="button"
@@ -119,25 +129,52 @@
                       d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
                     ></path></svg
                 ></a>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
 
         <Logo class="w-auto h-7 sm:h-8" />
 
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10">
-          Rapidly build modern websites without ever leaving your HTML.
-        </h1>
+        <div class="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
+          <h1 class="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
+            Rapidly build modern websites without ever leaving your HTML.
+          </h1>
+          <p class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
+            A utility-first CSS framework packed with classes like <code class="font-mono font-medium text-sky-500 dark:text-sky-400">flex</code>,
+            <code class="font-mono font-medium text-sky-500 dark:text-sky-400">pt-4</code>,
+            <code class="font-mono font-medium text-sky-500 dark:text-sky-400">text-center</code> and
+            <code class="font-mono font-medium text-sky-500 dark:text-sky-400">rotate-90</code> that can be composed to build any design, directly in your markup.
+          </p>
+          <div class="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm">
+            <a
+              class="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400"
+              href="/docs/installation"
+              >Get started</a
+            ><button
+              type="button"
+              class="hidden sm:flex items-center w-72 text-left space-x-3 px-4 h-12 bg-white ring-1 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm rounded-lg text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700"
+            >
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-none text-slate-300 dark:text-slate-400"
+                aria-hidden="true"
+              >
+                <path d="m19 19-3.5-3.5"></path>
+                <circle cx="11" cy="11" r="6"></circle></svg
+              ><span class="flex-auto">Quick search...</span
+              ><kbd class="font-sans font-semibold dark:text-slate-500"><abbr title="Control" class="no-underline text-slate-300 dark:text-slate-500">Ctrl </abbr> K</kbd>
+            </button>
+          </div>
+        </div>
 
-        <p class="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11">
-          A utility-first CSS framework packed with classes like
-          <code class="font-mono text-gray-900 font-bold">flex</code>, <code class="font-mono text-gray-900 font-bold">pt-4</code>,
-          <code class="font-mono text-gray-900 font-bold">text-center</code> and <code class="font-mono text-gray-900 font-bold">rotate-90</code> that can be composed to build any
-          design, directly in your markup.
-        </p>
-
-        <div class="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 text-center">
+        <!--<div class="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 text-center">
           <a
             class="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200"
             href="/docs/"
@@ -155,7 +192,7 @@
             </span>
             <IconCopy />
           </button>
-        </div>
+        </div>-->
       </div>
     </header>
   </div>
@@ -164,6 +201,7 @@
 <script>
 import SearchBox from './components/SearchBox.vue'
 import Logo from './components/Logo.vue'
+import DarkModeSwitch from './components/DarkModeSwitch.vue'
 import IconGitHub from './icons/IconGitHub.vue'
 import IconCopy from './icons/IconCopy.vue'
 import OutLink from './components/OutLink.vue'
@@ -172,7 +210,7 @@ import { useRoute, useData } from 'vitepress'
 import { ref, watch, computed } from 'vue'
 
 export default {
-  components: { SearchBox, Logo, IconGitHub, IconCopy, OutLink },
+  components: { SearchBox, Logo, IconGitHub, IconCopy, OutLink, DarkModeSwitch },
   setup() {
     const { site, page, theme } = useData()
     const route = useRoute()
