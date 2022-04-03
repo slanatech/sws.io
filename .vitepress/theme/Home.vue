@@ -1,6 +1,12 @@
 <template>
   <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden bg-slate-50 dark:bg-[#0B1120]">
     <header class="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto">
+      <div class="absolute inset-0 bottom-10 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120] beams-4">
+        <div
+          class="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5"
+          style="mask-image: linear-gradient(to bottom, transparent, black); -webkit-mask-image: linear-gradient(to bottom, transparent, black)"
+        ></div>
+      </div>
       <div class="px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
         <!--<div
           class="border-b border-gray-200 py-4 flex items-center justify-between mb-16 sm:mb-20 -mx-4 px-4 sm:mx-0 sm:px-0"
