@@ -45,7 +45,7 @@ The `@tailwindcss/custom-forms` plugin is not compatible with Tailwind CSS v2.0.
 
 As of v2.0 there are no `future` or `experimental` options available, so you can remove any configuration like this from your `tailwind.config.js` file:
 
-```diff-js
+```diff
   module.exports = {
 -   future: {
 -     defaultLineHeights: true,
@@ -84,7 +84,7 @@ The `hover` and `focus` variants have been disabled for the `fontWeight` plugin 
 
 If you need these in your project, re-enable them in your `tailwind.config.js` file:
 
-```diff-js
+```diff
   // tailwind.config.js
   module.exports = {
     variants: {
@@ -99,7 +99,7 @@ If you need these in your project, re-enable them in your `tailwind.config.js` f
 
 The `clearfix` class has been removed since `flow-root` is a simpler solution to the same problem in modern browsers.
 
-```diff-html
+```diff
 - <div class="**clearfix**">
 + <div class="**flow-root**">
     <img class="float-left" src="..." alt="..." />
@@ -129,14 +129,14 @@ These are a much better and more powerful alternative to the `shadow-outline` an
 
 Replace `shadow-outline` with `ring`:
 
-```diff-html
+```diff
 - <div class="... **focus:shadow-outline**">
 + <div class="... **focus:ring**">
 ```
 
 Replace `shadow-xs` with `ring-1 ring-black ring-opacity-5`:
 
-```diff-html
+```diff
 - <div class="... **shadow-xs**">
 + <div class="... **ring-1 ring-black ring-opacity-5**">
 ```
@@ -160,7 +160,7 @@ module.exports = {
 
 Tailwind CSS v2.0 adds a new `2xl` breakpoint which will affect any situations where you've used the `container` class. If this impacts you, remove the `2xl` breakpoint by overriding `screens` with your existing breakpoints:
 
-```diff-js
+```diff
 // tailwind.config.js
 module.exports = {
   purge: [
@@ -351,7 +351,7 @@ module.exports = {
 
 Alternatively, you can go through your HTML and explicitly add a `leading` utility anywhere where you were depending on an inherited line-height:
 
-```diff-html
+```diff
 - <p class="text-lg">...</p>
 + <p class="text-lg **leading-normal**">...</p>
 ```
@@ -531,7 +531,7 @@ We don't support this anymore, so update any `@apply` statements and remove the 
 
 The following regex can be useful to find and remove the leading dots in your `@apply` statements:
 
-```regex
+```
 (?<=@apply.*)\.
 ```
 
@@ -539,7 +539,7 @@ The following regex can be useful to find and remove the leading dots in your `@
 
 The `truncate` utility is now part of the `textOverflow` core plugin, so if you had enabled any extra variants (like `group-hover`) for the `wordBreak` plugin in order to use them with the `truncate` class, you'll want to enable them for `textOverflow` now as well or instead:
 
-```diff-js
+```diff
   // tailwind.config.js
   module.exports = {
     variants: {
@@ -615,7 +615,7 @@ We've updated how this works to no longer special case `template` elements and i
 
 To update your code for this change, just add `hidden` to your `template` tags:
 
-```diff-html
+```diff
   <div class="space-y-4">
 -   <template x-for="item in items">
 +   <template x-for="item in items" **hidden**>
@@ -630,7 +630,7 @@ Internally we've upgraded to [PurgeCSS 3.0](https://github.com/FullHuman/purgecs
 
 For example, if you were using `whitelist`, you'll want to update this to `safelist`:
 
-```diff-js
+```diff
   // tailwind.config.js
   module.exports = {
     purge: {
@@ -651,7 +651,7 @@ If you weren't using the `options` key, you don't need to do anything.
 
 In v1.0, Tailwind ignored the `preserveHtmlElements` option if you were using a custom extractor. This option is now properly respected in v2.0, so if you want to disable it you'll need to do so explicitly:
 
-```diff-js
+```diff
   // tailwind.config.js
   module.exports = {
     purge: {
@@ -674,7 +674,7 @@ If you've configured a prefix in your `tailwind.config.js` file, Tailwind v2.0 w
 
 If you are referencing any configured keyframes in custom CSS, you'll want to make sure you add your prefix:
 
-```diff-css
+```diff
   .my-class {
 -   animation: spin 1s infinite;
 +   animation: tw-spin 1s infinite;

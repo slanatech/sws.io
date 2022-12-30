@@ -5,20 +5,18 @@ const { createMarkdownRenderer } = require('vitepress')
 
 const md = createMarkdownRenderer(process.cwd())
 
-module.exports = {
-  watch: '../blog/*.md',
-  load(asFeed = false) {
-    const postDir = path.resolve(__dirname, '../blog')
-    return fs
-      .readdirSync(postDir)
-      .map((file) => getPost(file, postDir, asFeed))
-      .sort((a, b) => b.date.time - a.date.time)
-  }
-}
-
 const cache = new Map()
 
-function getPost(file, postDir, asFeed = false) {
+async function load(asFeed = false) {
+  const postDir = path.resolve(__dirname, '../blog')
+  const postsPromises = fs.readdirSync(postDir).map(async (file) => await getPost(file, postDir, asFeed))
+  //.sort((a, b) => b.date.time - a.date.time) TODO ???
+  const posts = await Promise.all(postsPromises)
+  posts.sort((a, b) => b.date.time - a.date.time)
+  return posts
+}
+
+async function getPost(file, postDir, asFeed = false) {
   const fullePath = path.join(postDir, file)
   const timestamp = fs.statSync(fullePath).mtimeMs
 
@@ -30,11 +28,13 @@ function getPost(file, postDir, asFeed = false) {
   const src = fs.readFileSync(fullePath, 'utf-8')
   const { data, excerpt } = matter(src, { excerpt: true })
 
+  const mmd = await md
+
   const post = {
     title: data.title,
     href: `/blog/${file.replace(/\.md$/, '.html')}`,
     date: formatDate(data.date),
-    excerpt: md.render(excerpt)
+    excerpt: mmd.render(excerpt),
   }
   if (asFeed) {
     // only attach these when building the RSS feed to avoid bloating the
@@ -44,7 +44,7 @@ function getPost(file, postDir, asFeed = false) {
 
   cache.set(fullePath, {
     timestamp,
-    post
+    post,
   })
   return post
 }
@@ -59,7 +59,12 @@ function formatDate(date) {
     string: date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
-    })
+      day: 'numeric',
+    }),
   }
+}
+
+module.exports = {
+  watch: '../blog/*.md',
+  load: load,
 }

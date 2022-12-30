@@ -118,7 +118,7 @@ If you're already familiar with PostCSS you probably know what you need to do, i
 
 When building for production, be sure to configure the `purge` option to remove any unused classes for the smallest file size:
 
-```diff-js
+```diff
   // tailwind.config.js
   module.exports = {
 +   purge: [
