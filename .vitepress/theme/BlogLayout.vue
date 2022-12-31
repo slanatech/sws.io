@@ -1,5 +1,16 @@
 <template>
   <PageHeader></PageHeader>
+  <div class="absolute z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
+    <div class="w-[108rem] flex-none flex justify-end">
+      <picture
+        ><source srcset="/media/docs@30.8b9a76a2.avif" type="image/avif" />
+        <img src="/media/docs@tinypng.d9e4dcdc.png" alt="" class="w-[71.75rem] flex-none max-w-none dark:hidden" decoding="async" /></picture
+      ><picture
+        ><source srcset="/media/docs-dark@30.1a9f8cbf.avif" type="image/avif" />
+        <img src="/media/docs-dark@tinypng.1bbe175e.png" alt="" class="w-[90rem] flex-none max-w-none hidden dark:block" decoding="async"
+      /></picture>
+    </div>
+  </div>
 
   <button type="button" @click="navOpen = !navOpen" class="fixed z-50 bottom-4 right-4 w-16 h-16 rounded-full bg-gray-900 text-white block lg:hidden">
     <span class="sr-only">Open site navigation</span>
@@ -8,11 +19,37 @@
   </button>
 
   <div class="w-full mx-auto max-w-8xl lg:flex">
-    <SideBar :nav-open="navOpen" @update:closeNav="navOpen = false" />
+    <BlogSideBar :nav-open="navOpen" @update:closeNav="navOpen = false" />
     <div class="min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible" :class="{ 'overflow-hidden max-h-screen fixed': navOpen }">
       <div class="w-full flex">
-        <ContentWrapper @contentUpdated="handleContentUpdate" />
+        <!--<ContentWrapper @contentUpdated="handleContentUpdate" />-->
         <!--<Content class="prose"></Content>-->
+        <article class="relative">
+          <!--<h1 class="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-slate-200 md:text-3xl">
+            {{ data.title }}
+          </h1>
+          <div class="text-sm leading-6">
+            <dl>
+              <dt class="sr-only">Date</dt>
+              <dd class="absolute top-0 inset-x-0 text-slate-700 dark:text-slate-400">
+                <Date :date="date" />
+              </dd>
+            </dl>
+          </div>
+          <div class="mt-6">
+            <Author />
+          </div>-->
+          <!--<Content class="mt-12 prose prose-slate dark:prose-dark" />-->
+          <!--<div class="text-sm leading-6">
+            <dl>
+              <dt class="sr-only">Date</dt>
+              <dd class="absolute top-0 inset-x-0 text-slate-700 dark:text-slate-400">
+                <Date :date="date" />
+              </dd>
+            </dl>
+          </div>-->
+          <ContentWrapper @contentUpdated="handleContentUpdate" class="prose prose-slate dark:prose-dark" />
+        </article>
         <TableOfContent :anchors="anchors" />
       </div>
     </div>
@@ -21,13 +58,18 @@
 
 <script>
 import PageHeader from './PageHeader.vue'
-import SideBar from './SideBar.vue'
+import BlogSideBar from './BlogSideBar.vue'
 import TableOfContent from './TableOfContent.vue'
 import ContentWrapper from './ContentWrapper.vue'
 import IconNavOpen from './icons/IconNavOpen.vue'
 import IconNavClose from './icons/IconNavClose.vue'
 import { ref, watch, computed } from 'vue'
-import { useData } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
+import { data as posts } from '../posts.data'
+
+function findCurrentIndex() {
+  return posts.findIndex((p) => p.href === route.path)
+}
 
 export default {
   data() {
@@ -38,20 +80,24 @@ export default {
   },
   components: {
     PageHeader,
-    SideBar,
+    BlogSideBar,
     TableOfContent,
     ContentWrapper,
     IconNavOpen,
     IconNavClose,
   },
   setup() {
-    const { site, page, theme, frontmatter } = useData()
+    const { site, page, theme, frontmatter: data } = useData()
+    const route = useRoute()
     //const currentRoute = ref();
     return {
       theme,
       page,
+      data: data,
+      route: route,
       collections: computed(() => theme.value.collections),
       pages: computed(() => theme.value.pages),
+      date: computed(() => posts[posts.findIndex((p) => p.href === route.path)].date),
     }
   },
   mounted() {

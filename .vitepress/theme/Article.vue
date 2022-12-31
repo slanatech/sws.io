@@ -1,6 +1,7 @@
 <script setup>
 import Date from './Date.vue'
 import Author from './Author.vue'
+import PageHeader from './PageHeader.vue'
 import TableOfContent from './TableOfContent.vue'
 import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
@@ -22,9 +23,7 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
 
 <template>
   <div class="antialiased">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
-      <nav class="flex justify-between items-center py-10 font-bold">NAV GOES HERE</nav>
-    </div>
+    <PageHeader></PageHeader>
     <div class="absolute z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
       <div class="w-[108rem] flex-none flex justify-end">
         <picture
@@ -36,7 +35,7 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
         /></picture>
       </div>
     </div>
-    <div class="overflow-hidden">
+    <div class="">
       <div class="max-w-8xl mx-auto">
         <div class="flex px-4 pt-8 pb-10 lg:px-8">
           <a class="group flex font-semibold text-sm leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white" href="/blog">
@@ -47,44 +46,41 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
           >
         </div>
       </div>
-      <div class="px-4 sm:px-6 md:px-8">
-        <div class="max-w-3xl mx-auto pb-28">
+      <div class="px-4 sm:px-6 md:px-8 flex justify-center">
+        <!-- <div class="max-w-3xl lg:mx-auto pb-28"> -->
+        <div class="max-w-4xl pb-28">
           <main>
-            <article class="relative pt-10">
-              <h1 class="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-slate-200 md:text-3xl">
-                {{ data.title }}
-              </h1>
-              <div class="text-sm leading-6">
-                <dl>
-                  <dt class="sr-only">Date</dt>
-                  <dd class="absolute top-0 inset-x-0 text-slate-700 dark:text-slate-400">
-                    <Date :date="date" />
-                  </dd>
-                </dl>
-              </div>
-              <div class="mt-6">
-                <!--<ul class="flex flex-wrap text-sm leading-6 -mt-6 -mx-5">
-                <li class="flex items-center font-medium whitespace-nowrap px-5 mt-6">
-                  <img src="/_next/static/media/adamwathan.8adb7a70.jpg" alt="" class="mr-3 w-9 h-9 rounded-full bg-slate-50 dark:bg-slate-800" decoding="async" />
-                  <div class="text-sm leading-4">
-                    <div class="text-slate-900 dark:text-slate-200">Adam Wathan</div>
-                    <div class="mt-1">
-                      <a href="https://twitter.com/adamwathan" class="text-sky-500 hover:text-sky-600 dark:text-sky-400"
-                        >@
-                        adamwathan</a
-                      >
+            <div class="w-full mx-auto max-w-8xl lg:flex">
+              <div class="min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible overflow-hidden max-h-screen fixed">
+                <div class="w-full flex">
+                  <article class="relative pt-10">
+                    <h1 class="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-slate-200 md:text-3xl">
+                      {{ data.title }}
+                    </h1>
+                    <div class="text-sm leading-6">
+                      <dl>
+                        <dt class="sr-only">Date</dt>
+                        <dd class="absolute top-0 inset-x-0 text-slate-700 dark:text-slate-400">
+                          <Date :date="date" />
+                        </dd>
+                      </dl>
                     </div>
-                  </div>
-                </li>
-              </ul>-->
-                <Author />
+                    <div class="mt-6">
+                      <Author />
+                    </div>
+                    <Content class="mt-12 prose prose-slate dark:prose-dark" />
+                  </article>
+                </div>
               </div>
-              <Content class="mt-12 prose prose-slate dark:prose-dark" />
-              <!--<div class="mt-12 prose prose-slate dark:prose-dark"></div>-->
-              <TableOfContent :anchors="[]" />
-            </article>
+            </div>
+            <!--<div class="flex">
+                <Content class="mt-12 prose prose-slate dark:prose-dark" />
+                <TableOfContent :anchors="[]" />
+              </div>-->
           </main>
         </div>
+        <!--<TableOfContent :anchors="anchors" />-->
+        <TableOfContent v-if="true" :anchors="anchors" />
       </div>
     </div>
   </div>

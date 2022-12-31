@@ -7,6 +7,7 @@
 <script>
 import Home from './Home.vue'
 import Blog from './Blog.vue'
+import BlogLayout from './BlogLayout.vue'
 import Article from './Article.vue'
 import PageLayout from './PageLayout.vue'
 import { useRoute, useData } from 'vitepress'
@@ -15,7 +16,7 @@ import { ref, watch, computed } from 'vue'
 //const { site, page, theme, frontmatter } = useData()
 
 export default {
-  components: { Home, Blog, PageLayout, Article },
+  components: { Home, Blog, BlogLayout, PageLayout, Article },
   setup() {
     //const { site, page, theme } = useData();
     const route = useRoute()
@@ -30,7 +31,7 @@ export default {
         } else if (route.path === '/blog/' || route.path === '/blog.html') {
           return 'Blog'
         } else if (route.path.startsWith('/blog/')) {
-          return 'Article'
+          return 'BlogLayout'
         } else {
           return 'PageLayout'
         }
