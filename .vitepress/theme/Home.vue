@@ -1,7 +1,7 @@
 <template>
   <div class="space-y-20 sm:space-y-32 md:space-y-40 lg:space-y-44 overflow-hidden bg-slate-50 dark:bg-[#0B1120]">
-    <header class="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto">
-      <div class="absolute inset-0 bottom-10 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120] beams-4">
+    <header class="relative z-10 mx-auto">
+      <div class="absolute inset-0 bottom-10 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120] beams-8">
         <div
           class="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5"
           style="mask-image: linear-gradient(to bottom, transparent, black); -webkit-mask-image: linear-gradient(to bottom, transparent, black)"
@@ -144,7 +144,7 @@
 
         <div class="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
           <h1 class="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
-            Rapidly build modern websites without ever leaving your HTML.
+            Rapidly build modern websites without ever leaving your HTML!
           </h1>
           <p class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
             A utility-first CSS framework packed with classes like <code class="font-mono font-medium text-sky-500 dark:text-sky-400">flex</code>,

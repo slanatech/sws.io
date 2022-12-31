@@ -1,6 +1,7 @@
 import './tailwind.css'
 import './prism.css'
 import './beams.css'
+import './fonts.css'
 import Layout from './Layout.vue'
 import Blog from './Blog.vue'
 

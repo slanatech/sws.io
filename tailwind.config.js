@@ -1,8 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const svgToDataUri = require('mini-svg-data-uri')
-const {
-  default: flattenColorPalette,
-} = require('tailwindcss/lib/util/flattenColorPalette')
+const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette')
 
 module.exports = {
   experimental: {
@@ -129,6 +127,18 @@ module.exports = {
               color: 'inherit',
               fontWeight: 'inherit',
             },
+            kbd: {
+              background: theme('colors.slate.100'),
+              borderWidth: '1px',
+              borderColor: theme('colors.slate.200'),
+              padding: '0.125em 0.25em',
+              color: theme('colors.slate.700'),
+              fontWeight: 500,
+              fontSize: '0.875em',
+              fontVariantLigatures: 'none',
+              borderRadius: '4px',
+              margin: '0 1px',
+            },
             code: {
               fontWeight: theme('fontWeight.medium'),
               fontVariantLigatures: 'none',
@@ -190,6 +200,11 @@ module.exports = {
             },
             'h2 small, h3 small, h4 small': {
               color: theme('colors.slate.400'),
+            },
+            kbd: {
+              background: theme('colors.slate.700'),
+              borderColor: theme('colors.slate.600'),
+              color: theme('colors.slate.200'),
             },
             code: {
               color: theme('colors.slate.200'),
@@ -254,17 +269,13 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms')({ strategy: 'class' }),
     function ({ addVariant }) {
-      addVariant(
-        'supports-backdrop-blur',
-        '@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))'
-      )
-      addVariant(
-        'supports-scrollbars',
-        '@supports selector(::-webkit-scrollbar)'
-      )
+      addVariant('supports-backdrop-blur', '@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0))')
+      addVariant('supports-scrollbars', '@supports selector(::-webkit-scrollbar)')
       addVariant('children', '& > *')
       addVariant('scrollbar', '&::-webkit-scrollbar')
       addVariant('scrollbar-track', '&::-webkit-scrollbar-track')
@@ -292,11 +303,8 @@ module.exports = {
     },
     function ({ addUtilities, theme }) {
       let backgroundSize = '7.07px 7.07px'
-      let backgroundImage = (color) =>
-        `linear-gradient(135deg, ${color} 10%, transparent 10%, transparent 50%, ${color} 50%, ${color} 60%, transparent 60%, transparent 100%)`
-      let colors = Object.entries(theme('backgroundColor')).filter(
-        ([, value]) => typeof value === 'object' && value[400] && value[500]
-      )
+      let backgroundImage = (color) => `linear-gradient(135deg, ${color} 10%, transparent 10%, transparent 50%, ${color} 50%, ${color} 60%, transparent 60%, transparent 100%)`
+      let colors = Object.entries(theme('backgroundColor')).filter(([, value]) => typeof value === 'object' && value[400] && value[500])
 
       addUtilities(
         Object.fromEntries(

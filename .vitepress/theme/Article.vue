@@ -1,6 +1,7 @@
 <script setup>
 import Date from './Date.vue'
 import Author from './Author.vue'
+import TableOfContent from './TableOfContent.vue'
 import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import { data as posts } from '../posts.data'
@@ -22,19 +23,76 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
 <template>
   <div class="antialiased">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
-      <nav class="flex justify-between items-center py-10 font-bold">
-        <a class="text-xl" href="/" aria-label="The Vue Point">
-          <img class="inline-block mr-2" style="width: 36px; height: 31px" alt="logo" src="/logo.svg" />
-        </a>
-        <div class="text-sm text-gray-500 leading-5">
-          <a class="hover:text-gray-700" href="https://github.com/vuejs/blog" target="_blank" rel="noopener"><span class="hidden sm:inline">GitHub </span>Source</a>
-          <span class="mr-2 ml-2">·</span>
-          <a class="hover:text-gray-700" href="/feed.rss">RSS<span class="hidden sm:inline"> Feed</span></a>
-          <span class="mr-2 ml-2">·</span>
-          <a class="hover:text-gray-700" href="https://vuejs.org" target="_blank" rel="noopener">Vuejs.org →</a>
-        </div>
-      </nav>
+      <nav class="flex justify-between items-center py-10 font-bold">NAV GOES HERE</nav>
     </div>
+    <div class="absolute z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none">
+      <div class="w-[108rem] flex-none flex justify-end">
+        <picture
+          ><source srcset="/media/docs@30.8b9a76a2.avif" type="image/avif" />
+          <img src="/media/docs@tinypng.d9e4dcdc.png" alt="" class="w-[71.75rem] flex-none max-w-none dark:hidden" decoding="async" /></picture
+        ><picture
+          ><source srcset="/media/docs-dark@30.1a9f8cbf.avif" type="image/avif" />
+          <img src="/media/docs-dark@tinypng.1bbe175e.png" alt="" class="w-[90rem] flex-none max-w-none hidden dark:block" decoding="async"
+        /></picture>
+      </div>
+    </div>
+    <div class="overflow-hidden">
+      <div class="max-w-8xl mx-auto">
+        <div class="flex px-4 pt-8 pb-10 lg:px-8">
+          <a class="group flex font-semibold text-sm leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white" href="/blog">
+            <svg viewBox="0 -9 3 24" class="overflow-visible mr-3 text-slate-400 w-auto h-6 group-hover:text-slate-600 dark:group-hover:text-slate-300">
+              <path d="M3 0L0 3L3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Go back</a
+          >
+        </div>
+      </div>
+      <div class="px-4 sm:px-6 md:px-8">
+        <div class="max-w-3xl mx-auto pb-28">
+          <main>
+            <article class="relative pt-10">
+              <h1 class="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-slate-200 md:text-3xl">
+                {{ data.title }}
+              </h1>
+              <div class="text-sm leading-6">
+                <dl>
+                  <dt class="sr-only">Date</dt>
+                  <dd class="absolute top-0 inset-x-0 text-slate-700 dark:text-slate-400">
+                    <Date :date="date" />
+                  </dd>
+                </dl>
+              </div>
+              <div class="mt-6">
+                <!--<ul class="flex flex-wrap text-sm leading-6 -mt-6 -mx-5">
+                <li class="flex items-center font-medium whitespace-nowrap px-5 mt-6">
+                  <img src="/_next/static/media/adamwathan.8adb7a70.jpg" alt="" class="mr-3 w-9 h-9 rounded-full bg-slate-50 dark:bg-slate-800" decoding="async" />
+                  <div class="text-sm leading-4">
+                    <div class="text-slate-900 dark:text-slate-200">Adam Wathan</div>
+                    <div class="mt-1">
+                      <a href="https://twitter.com/adamwathan" class="text-sky-500 hover:text-sky-600 dark:text-sky-400"
+                        >@
+                        adamwathan</a
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>-->
+                <Author />
+              </div>
+              <Content class="mt-12 prose prose-slate dark:prose-dark" />
+              <!--<div class="mt-12 prose prose-slate dark:prose-dark"></div>-->
+              <TableOfContent :anchors="[]" />
+            </article>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<div class="antialiased">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+      <nav class="flex justify-between items-center py-10 font-bold">NAV GOES HERE</nav>
+    </div>
+    <div class="absolute z-20 top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none"><div class="w-[108rem] flex-none flex justify-end"><picture><source srcset="/_next/static/media/docs@30.8b9a76a2.avif" type="image/avif"><img src="/_next/static/media/docs@tinypng.d9e4dcdc.png" alt="" class="w-[71.75rem] flex-none max-w-none dark:hidden" decoding="async"></picture><picture><source srcset="/_next/static/media/docs-dark@30.1a9f8cbf.avif" type="image/avif"><img src="/_next/static/media/docs-dark@tinypng.1bbe175e.png" alt="" class="w-[90rem] flex-none max-w-none hidden dark:block" decoding="async"></picture></div></div>
     <main class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
       <article class="xl:divide-y xl:divide-gray-200">
         <header class="pt-6 xl:pb-10 space-y-1 text-center">
@@ -70,5 +128,5 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
         </div>
       </article>
     </main>
-  </div>
+  </div>-->
 </template>
