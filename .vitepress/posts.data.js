@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
 const { createMarkdownRenderer } = require('vitepress')
-
+const { formatDate } = require('./theme/utils')
 const md = createMarkdownRenderer(process.cwd())
 
 const cache = new Map()
@@ -49,6 +49,7 @@ async function getPost(file, postDir, asFeed = false) {
   return post
 }
 
+/*
 function formatDate(date) {
   if (!(date instanceof Date)) {
     date = new Date(date)
@@ -62,7 +63,7 @@ function formatDate(date) {
       day: 'numeric',
     }),
   }
-}
+}*/
 
 module.exports = {
   watch: '../blog/*.md',

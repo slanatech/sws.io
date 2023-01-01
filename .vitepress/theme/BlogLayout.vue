@@ -48,7 +48,7 @@
               </dd>
             </dl>
           </div>-->
-          <ContentWrapper @contentUpdated="handleContentUpdate" class="prose prose-slate dark:prose-dark" />
+          <BlogContent @contentUpdated="handleContentUpdate" />
         </article>
         <TableOfContent :anchors="anchors" />
       </div>
@@ -59,6 +59,7 @@
 <script>
 import PageHeader from './PageHeader.vue'
 import BlogSideBar from './BlogSideBar.vue'
+import BlogContent from './BlogContent.vue'
 import TableOfContent from './TableOfContent.vue'
 import ContentWrapper from './ContentWrapper.vue'
 import IconNavOpen from './icons/IconNavOpen.vue'
@@ -81,6 +82,7 @@ export default {
   components: {
     PageHeader,
     BlogSideBar,
+    BlogContent,
     TableOfContent,
     ContentWrapper,
     IconNavOpen,
