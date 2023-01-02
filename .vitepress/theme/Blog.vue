@@ -8,7 +8,7 @@ import { data as posts } from '../posts.data'
     <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
       <nav class="flex justify-between items-center py-10 font-bold">
         <a class="text-xl" href="/" aria-label="The Vue Point">
-          <img class="inline-block mr-2" style="width: 36px; height: 31px" alt="logo" src="/logo.svg" />
+          <!--<img class="inline-block mr-2" style="width: 36px; height: 31px" alt="logo" src="/logo.svg" />-->
           <span class="hidden md:inline">The Vue Point</span>
         </a>
         <div class="text-sm text-gray-500 leading-5">

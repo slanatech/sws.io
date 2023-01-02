@@ -1,7 +1,9 @@
 ---
 title: "Protocol: A beautiful starting point for your next API documentation site"
 date: 2022-03-01
-author: Test test
+author: Slanatech
+gravatar: 60638420c88f636b5f022721edfb2b10
+twitter: '@slanatech'
 ---
 
 ## THIS IS THE LATEST POST
