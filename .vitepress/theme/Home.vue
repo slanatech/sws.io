@@ -13,9 +13,9 @@
         <div class="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
           <h1 class="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">AI Powered<br />CX Testing On a Massive Scale</h1>
           <p class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
-            In today's digital world, <span class="font-medium text-teal-700 dark:text-teal-400">Customer Experience (CX), </span>is a crucial factor for businesses to succeed.
+            In today's digital world, <span class="font-medium text-teal-700 dark:text-teal-400">Customer Experience (CX) </span>is a crucial factor for businesses to succeed.
             <span class="font-medium text-teal-700 dark:text-teal-400">A Positive CX, </span>can lead to increased customer
-            <span class="font-medium text-teal-700 dark:text-teal-400">Satisfaction, Loyalty, </span> and ultimately drive
+            <span class="font-medium text-teal-700 dark:text-teal-400">Satisfaction, Loyalty </span> and ultimately drive
             <span class="font-medium text-teal-700 dark:text-teal-400">Revenue Growth.</span>
           </p>
           <h2 class="mt-6 text-slate-900 font-extrabold text-2xl sm:text-3xl lg:text-4xl tracking-tight text-center dark:text-white/80">Ensure your CX is up to the task</h2>
@@ -44,6 +44,125 @@
               ><span class="flex-auto">Quick search...</span
               ><kbd class="font-sans font-semibold dark:text-slate-500"><abbr title="Control" class="no-underline text-slate-300 dark:text-slate-500">Ctrl </abbr> K</kbd>
             </button>
+          </div>
+        </div>
+
+        <!-- Section Two -->
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mt-20 sm:mt-24 lg:mt-32 lg:grid lg:gap-8 lg:grid-cols-12 lg:items-center">
+          <div class="relative row-start-1 col-start-6 xl:col-start-5 col-span-7 xl:col-span-8">
+            <div class="-mx-4 sm:mx-0">
+              <div
+                class="relative overflow-hidden shadow-xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] sm:rounded-xl lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none]"
+              >
+                <div class="relative w-full flex flex-col">
+                  <div class="relative min-h-0 flex-auto flex flex-col">
+                    <div class="w-full flex-auto flex min-h-0 overflow-auto">
+                      <div class="w-full relative flex-auto">
+                        <picture>
+                          <img src="/img/blog/metrics4.png" alt="" decoding="async" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative row-start-1 col-start-1 col-span-5 xl:col-span-3 -mt-10">
+            <div class="h-[24.25rem] max-w-xl mx-auto lg:max-w-none flex items-center justify-center">
+              <div class="w-full flex-none">
+                <div class="lg:-mr-18">
+                  <div class="relative z-10 rounded-lg shadow-xl text-slate-900 mx-auto sm:w-[23.4375rem] dark:text-slate-300" style="transform-origin: 50% 50% 0px; width: 664px">
+                    <div
+                      class="bg-white rounded-lg overflow-hidden ring-1 ring-slate-900/5 dark:bg-slate-800 dark:highlight-white/5 dark:ring-0 flex p-8"
+                      style="transform-origin: 50% 50% 0px"
+                    >
+                      <div
+                        class="absolute z-20 top-1/2 right-0 xl:right-auto xl:left-0 text-black rounded-full -mt-4 -mr-4 xl:mr-0 xl:-ml-4 pointer-events-none"
+                        style="opacity: 0; transform-origin: 50% 50% 0px"
+                      >
+                        <svg class="h-8 w-8" viewBox="0 0 100 100">
+                          <circle cx="50" cy="50" r="40" stroke="rgba(255, 255, 255, 0.5)" stroke-width="8" fill="rgba(0, 0, 0, 0.5)"></circle>
+                        </svg>
+                      </div>
+                      <div class="relative z-10 overflow-hidden flex-none -m-8 mr-8 w-64 h-auto" style="transform-origin: 50% 50% 0px; border-radius: 0%">
+                        <img
+                          src="/img/blog/happy3.png"
+                          decoding="async"
+                          alt=""
+                          class="absolute max-w-none object-cover bg-slate-100"
+                          style="width: 100%; height: 100%; left: 0px; top: 0px; transform-origin: 50% 50% 0px"
+                        />
+                      </div>
+                      <div class="" style="transform-origin: 50% 50% 0px">
+                        <div class="mb-4" style="transform-origin: 50% 50% 0px">
+                          <span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">“Tailwind </span><span style="opacity: 0; font-weight: 500">“Tailwind </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">CSS </span><span style="opacity: 0; font-weight: 500">CSS </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">is </span><span style="opacity: 0; font-weight: 500">is </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">the </span><span style="opacity: 0; font-weight: 500">the </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">only </span><span style="opacity: 0; font-weight: 500">only </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">framework </span><span style="opacity: 0; font-weight: 500">framework </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">that </span><span style="opacity: 0; font-weight: 500">that </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">I've </span><span style="opacity: 0; font-weight: 500">I've </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">seen </span><span style="opacity: 0; font-weight: 500">seen </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">scale </span><span style="opacity: 0; font-weight: 500">scale </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">on </span><span style="opacity: 0; font-weight: 500">on </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">large </span><span style="opacity: 0; font-weight: 500">large </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">teams. </span><span style="opacity: 0; font-weight: 500">teams. </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">It’s </span><span style="opacity: 0; font-weight: 500">It’s </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">easy </span><span style="opacity: 0; font-weight: 500">easy </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">to </span><span style="opacity: 0; font-weight: 500">to </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">customize, </span><span style="opacity: 0; font-weight: 500">customize, </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">adapts </span><span style="opacity: 0; font-weight: 500">adapts </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">to </span><span style="opacity: 0; font-weight: 500">to </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">any </span><span style="opacity: 0; font-weight: 500">any </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">design, </span><span style="opacity: 0; font-weight: 500">design, </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">and </span><span style="opacity: 0; font-weight: 500">and </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">the </span><span style="opacity: 0; font-weight: 500">the </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">build </span><span style="opacity: 0; font-weight: 500">build </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">size </span><span style="opacity: 0; font-weight: 500">size </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">is </span><span style="opacity: 0; font-weight: 500">is </span></span
+                          ><span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
+                            ><span class="absolute top-0 left-0" style="font-weight: 500">tiny.” </span><span style="opacity: 0; font-weight: 500">tiny.” </span></span
+                          >
+                        </div>
+                        <div class="flex flex-col items-start" style="font-weight: 500">
+                          <p class="transition-colors duration-500 text-sky-500 dark:text-sky-400" style="transform-origin: 50% 50% 0px">Sarah Dayan</p>
+                          <p class="transition-colors duration-500 text-slate-700 dark:text-slate-500" style="transform-origin: 50% 50% 0px">Staff Engineer, Algolia</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
