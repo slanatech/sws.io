@@ -50,7 +50,7 @@
         <!-- Section Two -->
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mt-20 sm:mt-24 lg:mt-32 lg:grid lg:gap-8 lg:grid-cols-12 lg:items-center">
-          <div class="relative row-start-1 col-start-6 xl:col-start-5 col-span-7 xl:col-span-8">
+          <div class="relative row-start-1 col-start-6 xl:col-start-5 col-span-7 xl:col-span-8 hidden lg:block">
             <div class="-mx-4 sm:mx-0">
               <div
                 class="relative overflow-hidden shadow-xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] sm:rounded-xl lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none]"
@@ -70,22 +70,11 @@
             </div>
           </div>
           <div class="relative row-start-1 col-start-1 col-span-5 xl:col-span-3 -mt-10">
-            <div class="h-[24.25rem] max-w-xl mx-auto lg:max-w-none flex items-center justify-center">
+            <div class="h-[24.25rem] max-w-xl mx-auto sm:max-w-none min-w-[564px] flex items-center justify-center">
               <div class="w-full flex-none">
                 <div class="lg:-mr-18">
-                  <div class="relative z-10 rounded-lg shadow-xl text-slate-900 mx-auto sm:w-[23.4375rem] dark:text-slate-300" style="transform-origin: 50% 50% 0px; width: 664px">
-                    <div
-                      class="bg-white rounded-lg overflow-hidden ring-1 ring-slate-900/5 dark:bg-slate-800 dark:highlight-white/5 dark:ring-0 flex p-8"
-                      style="transform-origin: 50% 50% 0px"
-                    >
-                      <div
-                        class="absolute z-20 top-1/2 right-0 xl:right-auto xl:left-0 text-black rounded-full -mt-4 -mr-4 xl:mr-0 xl:-ml-4 pointer-events-none"
-                        style="opacity: 0; transform-origin: 50% 50% 0px"
-                      >
-                        <svg class="h-8 w-8" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="40" stroke="rgba(255, 255, 255, 0.5)" stroke-width="8" fill="rgba(0, 0, 0, 0.5)"></circle>
-                        </svg>
-                      </div>
+                  <div class="relative z-10 rounded-lg shadow-xl text-slate-900 mx-auto sm:w-[564px] md:w-[764px] dark:text-slate-300">
+                    <div class="bg-white rounded-lg overflow-hidden ring-1 ring-slate-900/5 dark:bg-slate-800 dark:highlight-white/5 dark:ring-0 flex p-8">
                       <div class="relative z-10 overflow-hidden flex-none -m-8 mr-8 w-64 h-auto" style="transform-origin: 50% 50% 0px; border-radius: 0%">
                         <img
                           src="/img/blog/happy3.png"
@@ -95,6 +84,26 @@
                           style="width: 100%; height: 100%; left: 0px; top: 0px; transform-origin: 50% 50% 0px"
                         />
                       </div>
+                      <div class="text-lg font-medium">
+                        Are you looking to boost customer satisfaction and drive long-term business success? By continuously validating and improving the Customer eXperience, you
+                        can keep your customers happy and coming back for more. Start implementing continuous CX testing today and watch your business thrive!
+                        <a class="flex mt-4 items-center text-lg text-sky-500 font-medium" href="/blog/enegel-blog-post.html"
+                          ><span class="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl"></span><span class="relative">Read more</span
+                          ><svg
+                            class="relative mt-px overflow-visible ml-2.5 text-sky-300 dark:text-sky-700"
+                            width="3"
+                            height="6"
+                            viewBox="0 0 3 6"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path d="M0 0L3 3L0 6"></path></svg
+                        ></a>
+                      </div>
+                      <!--
                       <div class="" style="transform-origin: 50% 50% 0px">
                         <div class="mb-4" style="transform-origin: 50% 50% 0px">
                           <span class="relative inline-flex whitespace-pre text-lg" style="transform-origin: 50% 50% 0px"
@@ -158,6 +167,7 @@
                           <p class="transition-colors duration-500 text-slate-700 dark:text-slate-500" style="transform-origin: 50% 50% 0px">Staff Engineer, Algolia</p>
                         </div>
                       </div>
+                      -->
                     </div>
                   </div>
                 </div>

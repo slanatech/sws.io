@@ -1,11 +1,11 @@
 const { fetchDocs } = require('./fetchDocs')
 
 module.exports = {
-  title: 'Tailwind CSS',
-  description: 'Simplified Tailwindcss documentation site clone',
+  title: 'CX',
+  description: 'AI Powered Continuous CX Testing on a Massive Scale',
   srcDir: '.',
   themeConfig: {
-    repo: 'https://github.com/haoranpb/vitepress-tailwind-documentation',
+    repo: 'https://github.com/',
     pages: fetchDocs(),
     collections: {
       'Getting started': ['installation', 'upgrading-to-v2', 'using-with-preprocessors', 'optimizing-for-production', 'browser-support', 'intellisense'],

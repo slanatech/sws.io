@@ -1,4 +1,4 @@
 ---
-title: vitepress-tailwind-documentation
-description: Simplified Tailwindcss documentation site clone
+title: ENEGEL
+description: AI Powered Continuous CX Testing on a Massive Scale
 ---
